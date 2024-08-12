@@ -10,15 +10,15 @@ rustc 파일명.rs // 컴파일
 
 ## 패키지 매니저 cargo
 
----
+- cargo란 rust 의 패키지 매니저 이다.
 
-- cargo new hello_cargo --bin // hello_cargo 실행가능한 바이너리 생성, bin 인자를 통해서 라이브러리가 아닌 실행 가능합 앱으로 만들어줌
+- <span style="background-color: #fff5b1; color: black;">cargo new hello_cargo --bin</span> // hello_cargo 실행가능한 바이너리 생성, bin 인자를 통해서 라이브러리가 아닌 실행 가능합 앱으로 만들어줌
   // hello world 가 출려고디는 main 함수가 만들어져있음
 
 ### cargo 프로젝트 빌드
 
-- cargo build
-- ./target/debug/hello_cargo 혹은 cargo run // 빌드된 프로젝트 실행
+- <span style="background-color: #fff5b1; color: black;">cargo build</span>
+- ./target/debug/hello_cargo 혹은 <span style="background-color: #fff5b1; color: black;">cargo run</span> // 빌드된 프로젝트 실행
 - cargo check // 코드가 컴파일되는지를 빠르게 확인해주지만 실행파일을 생성하지는 않는다.
 - cargo build --release // 배포를 위해 최적화와 함께 빌드
 - cargo update // Cargo.toml 에 명시한 요구사항에 맞는 최신 버전을 확인. 버전에 문제가 없다면 Cargo는 해당 버전을 Cargo.lock 에 기록한다. -> 0.3.0를 dependency에 적어두었다면 0.4.0 미만의 0.3.x 최신 버전을 다운받는다.
@@ -64,7 +64,7 @@ Result 타입의 variants는 Ok 와 Err이다.
 
 io::Result 인스턴스는 expect 메소드를 가지고 있습니다. 만약 io::Result 인스턴스가 Err일 경우 expect 메소드는 프로그램이 작동을 멈추게 하고 expect에 인자로 넘겼던 메세지를 출력하도록 합니다
 
-## 크레이트 (crate)
+## 크레이트 (crate) == package
 
-- 크레이트는 러스트 코드의 묶음(package) 이다
--
+- package(코드묶름)를 rust에서는 크레이트(crate) 라고 한다.
+- 컴파일 해서 실행 가능한 것은 binary crate이고 rand와 같은 다른 프로그램에서 사용되기 위한 라이브러리는 library crate 입니다.
