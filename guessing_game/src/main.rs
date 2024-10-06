@@ -16,7 +16,7 @@ fn main() {
         // rust 변수는 기본적으로 불변, mut 을 사용해 가변변수로 만들 수 있음
         let mut guess = String::new(); // 빈 문자열을 만들어서 guess 에 할당
 
-        // read_line은 용자로부터 입력을 받기 위해 사용
+        // read_line은 사용자로부터 입력을 받기 위해 사용
         io::stdin().read_line(&mut guess) // io의 연관함수인 stdin을 호출
             .expect("Failed to read line");
 
